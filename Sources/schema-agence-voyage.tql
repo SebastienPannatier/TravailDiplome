@@ -1,0 +1,57 @@
+define
+
+# entities
+
+restaurant sub entity,
+  plays proximite:restaurant,
+  owns nom @key,
+  owns cuisine,
+  owns table-exterieur,
+  owns prix;
+
+hotel sub entity,
+  plays proximite:hotel,
+  owns nom @key,
+  owns prix,
+  owns petit-dejeuner,
+  owns ville,
+  owns wifi,
+  owns etoile,
+  owns piscine;
+
+# relationships
+
+proximite sub relation,
+  relates restaurant,
+  relates hotel;
+
+# attribute
+
+nom sub attribute,
+  value string;
+
+cuisine sub attribute,
+  value string;
+
+table-exterieur sub attribute,
+  value boolean;
+
+prix sub attribute,
+  value string;
+
+petit-dejeuner sub attribute,
+  value boolean;
+
+ville sub attribute,
+  value string;
+
+wifi sub attribute,
+  value boolean;
+
+etoile sub attribute,
+  value long;
+
+piscine sub attribute,
+  value boolean;
+  
+  

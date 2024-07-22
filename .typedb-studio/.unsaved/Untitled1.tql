@@ -1,0 +1,1 @@
+match $restaurant isa restaurant, has nom $nom, has cuisine $cuisine, has table-exterieur $exterieur, has prix $prix; get $nom, $cuisine, $exterieur, $prix;

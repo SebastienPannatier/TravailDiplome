@@ -1,0 +1,21 @@
+﻿Nom,Prix,Petit-dej,Ville,Wifi,Etoile,Piscine
+Grand Plaza,Chère,true,Paris,true,5,true
+Sunset Resort,Moderée,true,Miami,true,4,true
+The Oasis,Abordable,false,Barcelone,true,3,true
+Royal Palace,Chère,true,Londres,true,5,false
+City View Inn,Abordable,true,New York,true,2,false
+Mountain Retreat,Abordable,false,Zurich,true,3,true
+Seaside Hotel,Chère,true,Sydney,true,4,true
+The Grandeur,Chère,true,Rome,true,5,true
+Green Valley Lodge,Abordable,false,Cape Town,true,3,true
+Harbor View Inn,Abordable,true,San Francisco,true,3,false
+La Petite Auberge,Moderée,true,Paris,true,4,false
+Oceanfront Resort,Moderée,true,Miami,true,4,true
+Hillside Retreat,Abordable,true,Barcelone,true,3,false
+Regal Manor,Chère,true,Londres,true,5,false
+Central Plaza,Abordable,true,New York,true,3,false
+Alpine Lodge,Abordable,false,Zurich,true,2,true
+Coastal Escape,Moderée,true,Sydney,true,4,true
+The Renaissance,Chère,true,Rome,true,5,false
+Safari Lodge,Abordable,false,Cape Town,true,3,true
+Urban Oasis,Abordable,true,San Francisco,true,3,false
