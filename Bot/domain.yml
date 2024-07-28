@@ -8,6 +8,35 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - rechercher_restaurant
+
+actions:
+  - action_rechercher_restaurant
+
+entities:
+  - hotel
+  - table_exterieur
+  - cuisine
+
+slots:
+  cuisine:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cuisine
+  table_exterieur:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: table_exterieur
+  hotel:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: hotel
 
 responses:
   utter_greet:

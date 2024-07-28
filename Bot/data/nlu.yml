@@ -1,6 +1,7 @@
 version: "3.1"
 
 nlu:
+  # Basics intent (hello, bye, ...)
   - intent: greet
     examples: |
       - hey
@@ -64,3 +65,14 @@ nlu:
       - es tu un bot?
       - tu es un humain?
       - tu es une machine?
+
+  # Bot domain intent
+  - intent: rechercher_restaurant
+    examples: |
+      - Je cherche un restaurant à proximité de l'hôtel [Urban Oasis](hotel).
+      - Quel restaurant a des [tables extérieures](table_exterieur) ?
+      - Quels sont les restaurants qui servent de la cuisine [italienne](cuisine) ?
+      - Montre-moi des restaurants.
+      - Où puis-je trouver un restaurant avec des [tables extérieures](table_exterieur) ?
+      - J'ai envie de manger [italien](cuisine), où puis-je aller ?
+      - Quels restaurants offrent des [tables en extérieur](table_exterieur) ?
