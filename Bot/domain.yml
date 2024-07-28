@@ -9,14 +9,21 @@ intents:
   - mood_unhappy
   - bot_challenge
   - rechercher_restaurant
+  - rechercher_hotel
 
 actions:
   - action_rechercher_restaurant
+  - action_rechercher_hotel
 
 entities:
   - hotel
   - table_exterieur
   - cuisine
+  - restaurant
+  - petit-dejeuner
+  - ville
+  - wifi
+  - piscine
 
 slots:
   cuisine:
@@ -37,6 +44,36 @@ slots:
     mappings:
       - type: from_entity
         entity: hotel
+  restaurant:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: restaurant
+  petit-dejeuner:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: petit-dejeuner
+  ville:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ville
+  wifi:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: wifi
+  piscine:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: piscine
 
 responses:
   utter_greet:

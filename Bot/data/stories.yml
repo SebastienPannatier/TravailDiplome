@@ -35,3 +35,8 @@ stories:
     steps:
       - intent: rechercher_restaurant
       - action: action_rechercher_restaurant
+
+  - story: Rechercher un hotel à proximité
+    steps:
+      - intent: rechercher_hotel
+      - action: action_rechercher_hotel

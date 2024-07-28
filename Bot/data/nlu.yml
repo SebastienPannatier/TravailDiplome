@@ -76,3 +76,12 @@ nlu:
       - Où puis-je trouver un restaurant avec des [tables extérieures](table_exterieur) ?
       - J'ai envie de manger [italien](cuisine), où puis-je aller ?
       - Quels restaurants offrent des [tables en extérieur](table_exterieur) ?
+
+  - intent: rechercher_hotel
+    examples: |
+      - Je cherche un hotel proche du restaurant [Sabor Latino](restaurant)
+      - Quel hotel propose le [petit dejeuner](petit-dejeuner)
+      - quels hotels se trouvent à [Paris](ville)
+      - Montres-moi des hotels
+      - Ou est ce que je peux trouver un hotel avec du [wifi](wifi)
+      - J'ai envie d'un hotel avec une [piscine](piscine)
