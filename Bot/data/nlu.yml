@@ -85,3 +85,12 @@ nlu:
       - Montres-moi des hotels
       - Ou est ce que je peux trouver un hotel avec du [wifi](wifi)
       - J'ai envie d'un hotel avec une [piscine](piscine)
+
+  - intent: detail_restaurant
+    examples: |
+      - Est ce que nous pouvons manger en [terasse](table_exterieur) au [La Belle Epoque](restaurant) ?
+      - Est il possible de manger [dehor](table_exterieur) à [La Belle Epoque](restaurant)
+      - Est ce que le restaurant [Le Petit Bistro](restaurant) côute [cher](prix) ?
+      - Quel est le [prix](prix) moyens du restaurant [Le Petit Bistro](restaurant)
+      - Combien [coute](prix) [Le Petit Bistro](restaurant)
+      - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](restaurant) ?

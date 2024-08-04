@@ -10,10 +10,12 @@ intents:
   - bot_challenge
   - rechercher_restaurant
   - rechercher_hotel
+  - detail_restaurant
 
 actions:
   - action_rechercher_restaurant
   - action_rechercher_hotel
+  - action_detail_restaurant
 
 entities:
   - hotel
@@ -24,6 +26,7 @@ entities:
   - ville
   - wifi
   - piscine
+  - prix
 
 slots:
   cuisine:
@@ -74,6 +77,12 @@ slots:
     mappings:
       - type: from_entity
         entity: piscine
+  prix:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: prix
 
 responses:
   utter_greet:
