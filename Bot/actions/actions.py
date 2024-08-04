@@ -104,16 +104,16 @@ class ActionRechercherHotel(Action):
         return query
 
     def query_typedb(self, query):
-        list_restaurants = ""
+        list_hotels = ""
         with TypeDB.core_driver("localhost:1729") as client:
             with client.session("agence-de-voyage", SessionType.DATA) as session:
                 with session.transaction(TransactionType.READ) as transaction:
                     answer_iterator = transaction.query.fetch(query)
                     for i, JSON in enumerate(answer_iterator, start=1):
                         nom_value = JSON.get('h', {}).get('nom', [{}])[0].get('value', 'N/A')
-                        list_restaurants += f"Hotel #{i}: {nom_value}\n"
+                        list_hotels += f"Hotel #{i}: {nom_value}\n"
                     print("Requete envoyé")
-        return list_restaurants
+        return list_hotels
     
 class ActionDetailRestaurant(Action):
     def name(self) -> str:
