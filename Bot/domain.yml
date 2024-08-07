@@ -11,11 +11,13 @@ intents:
   - rechercher_restaurant
   - rechercher_hotel
   - detail_restaurant
+  - details_complet_restaurant
 
 actions:
   - action_rechercher_restaurant
   - action_rechercher_hotel
   - action_detail_restaurant
+  - action_detail_complet_restaurant
 
 entities:
   - hotel
@@ -84,6 +86,11 @@ slots:
       - type: from_entity
         entity: prix
 
+forms:
+  restaurant_name_form:
+    required_slots:
+      - restaurant
+
 responses:
   utter_greet:
     - text: "Bonjour, je vous souhaite la bienvenue"
@@ -110,6 +117,11 @@ responses:
   utter_iamabot:
     - text: "Je suis un robot, je suis la pour vous aider"
     - text: "Je suis une machine, j'espere pouvoir vous aider"
+
+  utter_demande_nom_restaurant:
+    - text: "Quel est le nom du restaurant?"
+    - text: "Pouvez-vous me donner le nom du restaurant?"
+    - text: "Comment se nomme le restaurant en question?"
 
 session_config:
   session_expiration_time: 60

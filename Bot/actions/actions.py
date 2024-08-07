@@ -165,3 +165,49 @@ class ActionDetailRestaurant(Action):
                             list_detail += f"Prix: {prix_value}\n"
                     print("Requete envoyé")
         return list_detail
+    
+class ActionDetailCompletRestaurant(Action):
+    def name(self) -> str:
+        return "action_detail_complet_restaurant"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict):
+        # Extraction des slots pertinents
+        restaurant = tracker.get_slot('restaurant')
+
+        # Création de la requête TypeDB
+        query = self.build_query(restaurant)
+        
+        # Envoi de la requête à TypeDB
+        details = self.query_typedb(query)
+        if details:
+            response = f"Voici les informations du restaurant {restaurant} :\n" + details
+            dispatcher.utter_message(response)
+        else:
+            response = "Je suis désolé mais je n'ai pas pu trouver d'informations a propos de ce restaurant."
+            dispatcher.utter_message(buttons={"title":"Recherche approfondie", "payload":"details_complet_restaurant"},response=response)
+
+        return [SlotSet("restaurant", None)]
+
+    def build_query(self, restaurant):
+        query = f"match $r isa restaurant, has nom '{restaurant}'; fetch $r: cuisine, table-exterieur, prix;"
+        return query
+
+    def query_typedb(self, query):
+        list_detail = ""
+        with TypeDB.core_driver("localhost:1729") as client:
+            with client.session("agence-de-voyage", SessionType.DATA) as session:
+                with session.transaction(TransactionType.READ) as transaction:
+                    answer_iterator = transaction.query.fetch(query)
+                    for i, JSON in enumerate(answer_iterator, start=1):
+                        cuisine_value = JSON.get('r', {}).get('cuisine', [{}])[0].get('value', 'N/A')
+                        table_ext_value = JSON.get('r', {}).get('cuisine', [{}])[0].get('value', 'N/A')
+                        if table_ext_value == True:
+                            table_ext_value = "Oui"
+                        else:
+                            table_ext_value = "Non"
+                        prix_value = JSON.get('r', {}).get('cuisine', [{}])[0].get('value', 'N/A')
+                        list_detail += f" Type de cuisine: {cuisine_value}\n"
+                        list_detail += f" Terrace: {cuisine_value}\n"
+                        list_detail += f" Catégorie de prix: {prix_value}\n"
+                    print("Requete envoyé")
+        return list_detail

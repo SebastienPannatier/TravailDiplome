@@ -94,3 +94,9 @@ nlu:
       - Quel est le [prix](prix) moyens du restaurant [Le Petit Bistro](restaurant)
       - Combien [coute](prix) [Le Petit Bistro](restaurant)
       - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](restaurant) ?
+
+  - intent: details_complet_restaurant
+    examples: |
+      - Je veux voir les details d'un restaurant
+      - Je veux connaitre les informations d'un restaurant
+      - Je veux la liste des services que propose un restaurant
