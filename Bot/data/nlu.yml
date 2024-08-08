@@ -108,3 +108,9 @@ nlu:
       - Y a-t-il une [piscine](piscine) à l'hotel [Hillside Retreat](hotel) ?
       - Combien [coute](prix) l'hotel [The Renaissance](hotel) ?
       - Est ce qu'il y a du [wifi](wifi) à l'hotel [Harbor View Inn](hotel) ?
+
+  - intent: details_complet_hotel
+    examples: |
+      - Je veux voir les details d'un hotel
+      - Je veux connaitre les informations d'un hotel
+      - Je veux la liste des services que propose un hotel

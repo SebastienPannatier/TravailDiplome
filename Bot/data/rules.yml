@@ -25,3 +25,18 @@ rules:
       - action: restaurant_name_form
       - active_loop: null
       - action: action_detail_complet_restaurant
+
+  - rule: Activer form pour nom hotel
+    steps:
+      - intent: details_complet_hotel
+      - action: utter_demande_nom_hotel
+      - action: hotel_name_form
+      - active_loop: hotel_name_form
+
+  - rule: Terminer form nom hotel
+    condition:
+      - active_loop: hotel_name_form
+    steps:
+      - action: hotel_name_form
+      - active_loop: null
+      - action: action_detail_complet_hotel

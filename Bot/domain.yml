@@ -13,6 +13,7 @@ intents:
   - detail_restaurant
   - details_complet_restaurant
   - detail_hotel
+  - details_complet_hotel
 
 actions:
   - action_rechercher_restaurant
@@ -20,6 +21,7 @@ actions:
   - action_detail_restaurant
   - action_detail_complet_restaurant
   - action_detail_hotel
+  - action_detail_complet_hotel
 
 entities:
   - hotel
@@ -99,6 +101,9 @@ forms:
   restaurant_name_form:
     required_slots:
       - restaurant
+  hotel_name_form:
+    required_slots:
+      - hotel
 
 responses:
   utter_greet:
@@ -131,6 +136,11 @@ responses:
     - text: "Quel est le nom du restaurant?"
     - text: "Pouvez-vous me donner le nom du restaurant?"
     - text: "Comment se nomme le restaurant en question?"
+
+  utter_demande_nom_hotel:
+    - text: "Quel est le nom de l'hotel?"
+    - text: "Pouvez-vous me donner le nom de l'hotel?"
+    - text: "Comment se nomme l'hotel en question?"
 
 session_config:
   session_expiration_time: 60
