@@ -45,3 +45,8 @@ stories:
     steps:
       - intent: detail_restaurant
       - action: action_detail_restaurant
+
+  - story: Rechercher les details d'un hotel
+    steps:
+      - intent: detail_hotel
+      - action: action_detail_hotel

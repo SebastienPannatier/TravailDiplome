@@ -12,12 +12,14 @@ intents:
   - rechercher_hotel
   - detail_restaurant
   - details_complet_restaurant
+  - detail_hotel
 
 actions:
   - action_rechercher_restaurant
   - action_rechercher_hotel
   - action_detail_restaurant
   - action_detail_complet_restaurant
+  - action_detail_hotel
 
 entities:
   - hotel
@@ -29,6 +31,7 @@ entities:
   - wifi
   - piscine
   - prix
+  - etoiles
 
 slots:
   cuisine:
@@ -85,6 +88,12 @@ slots:
     mappings:
       - type: from_entity
         entity: prix
+  etoiles:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: etoiles
 
 forms:
   restaurant_name_form:

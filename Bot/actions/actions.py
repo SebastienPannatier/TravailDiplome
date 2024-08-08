@@ -228,3 +228,77 @@ class ActionDetailCompletRestaurant(Action):
                         list_detail += f" Catégorie de prix: {prix_value}\n"
                     print("Requete envoyé")
         return list_detail
+    
+class ActionDetailHotel(Action):
+    def name(self) -> str:
+        return "action_detail_hotel"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict):
+        # Extraction des slots pertinents
+        piscine = tracker.get_slot('piscine')
+        wifi = tracker.get_slot('wifi')
+        etoiles = tracker.get_slot('etoiles')
+        prix = tracker.get_slot('prix')
+        petit_dejeuner = tracker.get_slot('petit-dejeuner')
+        hotel = tracker.get_slot('hotel')
+
+        # Création de la requête TypeDB
+        query = self.build_query(hotel)
+        
+        # Envoi de la requête à TypeDB
+        details = self.query_typedb(query, piscine, wifi, etoiles, prix, petit_dejeuner)
+        if details:
+            response = f"Voici les informations de l'hotel {hotel} :\n" + details
+            dispatcher.utter_message(response)
+        else:
+            response = "Je suis désolé mais je n'ai pas pu trouver d'informations a propos de cet hotel."
+            button = [
+                {
+                    "title": "Rechercher un hotel",
+                    "payload": "/details_complet_hotel"
+                }
+            ]
+            dispatcher.utter_message(buttons=button, text=response)
+
+        return [SlotSet("piscine", None), SlotSet("wifi", None), SlotSet("etoiles", None), SlotSet("prix", None), SlotSet("hotel", None), SlotSet("petit-dejeuner", None)]
+
+    def build_query(self, hotel):
+        query = f"match $h isa hotel, has nom '{hotel}'; fetch $h: wifi, petit-dejeuner, prix, etoile, piscine;"
+        return query
+
+    def query_typedb(self, query, piscine, wifi, etoiles, prix, petit_dejeuner):
+        list_detail = ""
+        with TypeDB.core_driver("localhost:1729") as client:
+            with client.session("agence-de-voyage", SessionType.DATA) as session:
+                with session.transaction(TransactionType.READ) as transaction:
+                    answer_iterator = transaction.query.fetch(query)
+                    for i, JSON in enumerate(answer_iterator, start=1):
+                        if piscine:
+                            piscine_value = JSON.get('h', {}).get('piscine', [{}])[0].get('value', 'N/A')
+                            if piscine_value == True:
+                                piscine_value = "Oui"
+                            else:
+                                piscine_value = "Non"
+                            list_detail += f"Piscine: {piscine_value}\n"
+                        if wifi:
+                            wifi_value = JSON.get('h', {}).get('wifi', [{}])[0].get('value', 'N/A')
+                            if wifi_value == True:
+                                wifi_value = "Oui"
+                            else:
+                                wifi_value = "Non"
+                            list_detail += f"Wifi: {wifi_value}\n"
+                        if etoiles:
+                            etoiles_value = JSON.get('h', {}).get('etoile', [{}])[0].get('value', 'N/A')
+                            list_detail += f"Etoiles: {etoiles_value}\n"
+                        if prix:
+                            prix_value = JSON.get('h', {}).get('prix', [{}])[0].get('value', 'N/A')
+                            list_detail += f"Catégorie de prix: {prix_value}\n"
+                        if petit_dejeuner:
+                            petit_dej_value = JSON.get('h', {}).get('petit-dejeuner', [{}])[0].get('value', 'N/A')
+                            if petit_dej_value == True:
+                                petit_dej_value = "Oui"
+                            else:
+                                petit_dej_value = "Non"
+                            list_detail += f"Petit-dejeuner: {petit_dej_value}\n"
+                    print("Requete envoyé")
+        return list_detail

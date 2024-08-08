@@ -100,3 +100,11 @@ nlu:
       - Je veux voir les details d'un restaurant
       - Je veux connaitre les informations d'un restaurant
       - Je veux la liste des services que propose un restaurant
+
+  - intent: detail_hotel
+    examples: |
+      - Combien [d'étoile](etoiles) à l'hotel [The Oasis](hotel)?
+      - Est ce que l'hotel [Grand Plaza](hotel) propose le [petit-dejeuner](petit-dejeuner) ?
+      - Y a-t-il une [piscine](piscine) à l'hotel [Hillside Retreat](hotel) ?
+      - Combien [coute](prix) l'hotel [The Renaissance](hotel) ?
+      - Est ce qu'il y a du [wifi](wifi) à l'hotel [Harbor View Inn](hotel) ?
