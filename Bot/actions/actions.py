@@ -133,10 +133,17 @@ class ActionDetailRestaurant(Action):
         details = self.query_typedb(query, cuisine, table_exterieur, prix)
         if details:
             response = f"Voici les informations du restaurant {restaurant} :\n" + details
+            dispatcher.utter_message(response)
         else:
             response = "Je suis désolé mais je n'ai pas pu trouver d'informations a propos de ce restaurant."
+            button = [
+                {
+                    "title": "Rechercher un restaurant",
+                    "payload": "/details_complet_restaurant"
+                }
+            ]
+            dispatcher.utter_message(buttons=button, text=response)
 
-        dispatcher.utter_message(response)
         return [SlotSet("cuisine", None), SlotSet("table_exterieur", None), SlotSet("restaurant", None), SlotSet("prix", None)]
 
     def build_query(self, restaurant):
@@ -183,8 +190,18 @@ class ActionDetailCompletRestaurant(Action):
             response = f"Voici les informations du restaurant {restaurant} :\n" + details
             dispatcher.utter_message(response)
         else:
+            button = [
+                {
+                    "title":"Recherche un autre restaurant",
+                    "payload":"/details_complet_restaurant"
+                },
+                {
+                    "title":"Voir la liste des restaurants",
+                    "payload":"/rechercher_restaurant"
+                }
+            ]
             response = "Je suis désolé mais je n'ai pas pu trouver d'informations a propos de ce restaurant."
-            dispatcher.utter_message(buttons={"title":"Recherche approfondie", "payload":"details_complet_restaurant"},response=response)
+            dispatcher.utter_message(buttons=button, text=response)
 
         return [SlotSet("restaurant", None)]
 
