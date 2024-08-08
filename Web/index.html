@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travail de diplôme - ESIG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Travail de diplôme - ESIG</h1>
+      <h2>Sébastien Pannatier</h2>
+    </header>
+    <div id="chat-container">
+      <div id="messages"></div>
+      <div id="input-container">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Posez votre question ici..."
+          onkeydown="if (event.key === 'Enter') sendMessage()"
+        />
+        <button onclick="sendMessage()">Envoyer</button>
+      </div>
+    </div>
+    <footer>
+      <a
+        href="https://github.com/SebastienPannatier/TravailDiplome"
+        target="_blank"
+        >Projet GitHub</a
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
