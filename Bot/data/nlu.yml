@@ -77,7 +77,7 @@ nlu:
   # Bot domain intent
   - intent: rechercher_restaurant
     examples: |
-      - Je cherche un restaurant à proximité de l'hôtel [Urban Oasis](hotel).
+      - Je cherche un restaurant à proximité de l'hôtel [Urban Oasis](LOC).
       - Quel restaurant a des [tables extérieures](table_exterieur) ?
       - Quels sont les restaurants qui servent de la cuisine [italienne](cuisine) ?
       - Montre-moi des restaurants.
@@ -111,11 +111,11 @@ nlu:
 
   - intent: detail_hotel
     examples: |
-      - Combien [d'étoile](etoiles) à l'hotel [The Oasis](hotel)?
-      - Est ce que l'hotel [Grand Plaza](hotel) propose le [petit-dejeuner](petit-dejeuner) ?
-      - Y a-t-il une [piscine](piscine) à l'hotel [Hillside Retreat](hotel) ?
-      - Combien [coute](prix) l'hotel [The Renaissance](hotel) ?
-      - Est ce qu'il y a du [wifi](wifi) à l'hotel [Harbor View Inn](hotel) ?
+      - Combien [d'étoile](etoiles) à l'hotel [The Oasis](LOC)?
+      - Est ce que l'hotel [Grand Plaza](LOC) propose le [petit-dejeuner](petit-dejeuner) ?
+      - Y a-t-il une [piscine](piscine) à l'hotel [Hillside Retreat](LOC) ?
+      - Combien [coute](prix) l'hotel [The Renaissance](LOC) ?
+      - Est ce qu'il y a du [wifi](wifi) à l'hotel [Harbor View Inn](LOC) ?
 
   - intent: details_complet_hotel
     examples: |

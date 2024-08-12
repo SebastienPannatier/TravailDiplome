@@ -25,7 +25,6 @@ actions:
   - action_detail_complet_hotel
 
 entities:
-  - hotel
   - table_exterieur
   - cuisine
   - restaurant
@@ -54,7 +53,10 @@ slots:
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: hotel
+        entity: LOC
+        intent:
+          - rechercher_restaurant
+          - detail_hotel
   restaurant:
     type: text
     influence_conversation: true
@@ -73,6 +75,7 @@ slots:
     mappings:
       - type: from_entity
         entity: LOC
+        intent: rechercher_hotel
   wifi:
     type: text
     influence_conversation: true
