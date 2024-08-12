@@ -66,6 +66,14 @@ nlu:
       - tu es un humain?
       - tu es une machine?
 
+  - intent: who_am_i
+    examples: |
+      - Qu'est ce que tu peux faire?
+      - A quoi tu sers?
+      - Sur quoi peux tu m'aider?
+      - Quel est ton but?
+      - Presentes toi
+
   # Bot domain intent
   - intent: rechercher_restaurant
     examples: |

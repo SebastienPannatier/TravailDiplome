@@ -29,6 +29,11 @@ stories:
       - intent: deny
       - action: utter_goodbye
 
+  - story: welcome
+    steps:
+      - intent: who_am_i
+      - action: utter_who_am_i
+
   #  Custom stories
 
   - story: Rechercher un restaurant à proximité

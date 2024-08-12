@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - who_am_i
   - rechercher_restaurant
   - rechercher_hotel
   - detail_restaurant
@@ -131,6 +132,13 @@ responses:
   utter_iamabot:
     - text: "Je suis un robot, je suis la pour vous aider"
     - text: "Je suis une machine, j'espere pouvoir vous aider"
+
+  utter_who_am_i:
+    - text: "Salut 👋 ! Je suis ton assistant pour trouver les meilleurs hôtels et restaurants 🌟. Comment puis-je t’aider aujourd’hui ?"
+    - text: "Bienvenue ! Je suis là pour t’aider à dénicher les meilleures adresses 🏨🍽️. Dis-moi ce que tu recherches !"
+    - text: "Bonjour ! Prêt(e) à découvrir des trésors cachés 🗺️ ? Je suis là pour te guider dans ta quête d’hôtels et de restaurants 😃."
+    - text: "Coucou ! C’est moi, ton expert des bonnes adresses 🕵️‍♂️. Besoin d’une recommandation pour un hôtel ou un resto ?"
+    - text: "Hey, je suis là pour rendre ta recherche d’hôtels et de restaurants aussi simple que possible 💡. Par quoi commençons-nous ?"
 
   utter_demande_nom_restaurant:
     - text: "Quel est le nom du restaurant?"
