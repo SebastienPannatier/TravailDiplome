@@ -1,9 +1,11 @@
-async function sendMessage(message = null) {
+async function sendMessage(message = null, affiche = true) {
   const inputField = document.getElementById("user-input");
   const userMessage = message || inputField.value;
   if (userMessage.trim() === "") return;
 
-  displayMessage(userMessage, "user");
+  if (affiche == true) {
+    displayMessage(userMessage, "user");
+  }
 
   const response = await fetch("http://localhost:5005/webhooks/rest/webhook", {
     method: "POST",
@@ -66,3 +68,9 @@ function displayButtons(buttons) {
   messagesContainer.appendChild(buttonsContainer);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    sendMessage("Presentes toi", false);
+  }
+};
