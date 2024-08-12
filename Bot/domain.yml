@@ -30,7 +30,7 @@ entities:
   - cuisine
   - restaurant
   - petit-dejeuner
-  - ville
+  - LOC
   - wifi
   - piscine
   - prix
@@ -72,7 +72,7 @@ slots:
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: ville
+        entity: LOC
   wifi:
     type: text
     influence_conversation: true

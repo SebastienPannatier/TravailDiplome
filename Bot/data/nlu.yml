@@ -89,7 +89,7 @@ nlu:
     examples: |
       - Je cherche un hotel proche du restaurant [Sabor Latino](restaurant)
       - Quel hotel propose le [petit dejeuner](petit-dejeuner)
-      - quels hotels se trouvent à [Paris](ville)
+      - quels hotels se trouvent à [Paris](LOC)
       - Montres-moi des hotels
       - Ou est ce que je peux trouver un hotel avec du [wifi](wifi)
       - J'ai envie d'un hotel avec une [piscine](piscine)
