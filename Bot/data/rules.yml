@@ -40,3 +40,8 @@ rules:
       - action: hotel_name_form
       - active_loop: null
       - action: action_detail_complet_hotel
+
+  - rule: Pas pris en charge
+    steps:
+      - intent: pas_pris_en_charge
+      - action: utter_pas_compris

@@ -83,6 +83,8 @@ nlu:
       - Où puis-je trouver un restaurant avec des [tables extérieures](table_exterieur) ?
       - J'ai envie de manger [italien](cuisine), où puis-je aller ?
       - Quels restaurants offrent des [tables en extérieur](table_exterieur) ?
+      - Je cherche un restaurant
+      - Je veux voir des restaurants
 
   - intent: rechercher_restaurant_proche_hotel
     examples: |
@@ -100,6 +102,8 @@ nlu:
       - Ou est ce que je peux trouver un hotel avec du [wifi](wifi)
       - J'ai envie d'un hotel avec une [piscine](piscine)
       - Bien merci. J'aimerai voir les hotels
+      - Je cherche un hotel
+      - Je veux voir des hotels
 
   - intent: rechercher_hotel_proche_restaurant
     examples: |
@@ -138,3 +142,27 @@ nlu:
       - Je veux connaitre les informations d'un hotel
       - Je veux la liste des services que propose un hotel
       - Tu peux me donner des informations sur l'hotel [La Petite Auberge](LOC)
+
+  - intent: pas_pris_en_charge
+    examples: |
+      - Quelle heure est il?
+      - Quel temps fait-il aujourd’hui ?
+      - Peux-tu me donner la date d’aujourd’hui ?
+      - Comment se rendre à la gare la plus proche ?
+      - Qui a gagné le match de foot hier ?
+      - Quelles sont les dernières nouvelles ?
+      - Quel est le taux de change de l’euro aujourd’hui ?
+      - Est-ce que tu connais la réponse à cette question ?
+      - Comment fonctionne un moteur à combustion ?
+      - Peux-tu me raconter une blague ?
+      - Quel est le cours actuel de l’action Apple ?
+      - Quelle est la capitale de l’Australie ?
+      - Donne-moi une recette pour un gâteau au chocolat.
+      - Combien de temps faut-il pour aller à Paris en voiture ?
+      - Quelle est la signification du mot “catalyseur” ?
+      - Peux-tu me rappeler mes rendez-vous pour aujourd’hui ?
+      - Quelle est la meilleure façon de faire cuire un steak ?
+      - Quel est le numéro de téléphone de la mairie ?
+      - Qui est le président des États-Unis ?
+      - Comment puis-je apprendre à coder ?
+      - Peux-tu me dire combien il reste de jours avant Noël ?

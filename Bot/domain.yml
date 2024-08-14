@@ -17,6 +17,7 @@ intents:
   - details_complet_restaurant
   - detail_hotel
   - details_complet_hotel
+  - pas_pris_en_charge
 
 actions:
   - action_rechercher_restaurant
@@ -156,6 +157,11 @@ responses:
     - text: "Quel est le nom de l'hotel?"
     - text: "Pouvez-vous me donner le nom de l'hotel?"
     - text: "Comment se nomme l'hotel en question?"
+
+  utter_pas_compris:
+    - text: "Je suis désolé, je n'ai pas compris. Pouvez-vous reformuler votre demande ?"
+    - text: "Excusez-moi, je n'ai pas compris votre demande. Pouvez vous réassayer?"
+    - text: "Je suis désolé mais je n'ai pas compris."
 
 session_config:
   session_expiration_time: 60
