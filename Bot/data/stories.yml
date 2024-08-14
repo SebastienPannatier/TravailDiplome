@@ -65,3 +65,34 @@ stories:
     steps:
       - intent: detail_hotel
       - action: action_detail_hotel
+
+  - story: Basique interaction 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: rechercher_hotel
+      - action: action_rechercher_hotel
+
+  - story: Basique interaction 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: rechercher_hotel
+      - action: action_rechercher_hotel
+      - intent: rechercher_hotel_proche_restaurant
+      - action: action_rechercher_hotel
+      - intent: rechercher_restaurant_proche_hotel
+      - action: action_rechercher_restaurant
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Basique ineraction 2
+    steps:
+      - intent: rechercher_restaurant
+      - action: action_rechercher_restaurant
+      - intent: detail_restaurant
+      - action: action_detail_restaurant
+      - intent: rechercher_hotel_proche_restaurant
+      - action: action_rechercher_hotel
+      - intent: detail_hotel
+      - action: action_detail_hotel

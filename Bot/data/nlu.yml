@@ -89,6 +89,8 @@ nlu:
       - Je cherche un restaurant à proximité de l'hôtel [Urban Oasis](LOC).
       - Je veux manger proche de l'hotel [Coastal Escape](LOC)
       - Je veux un restaurant a coté de l'hotel [Regal Manor](LOC)
+      - Tu peux me donner un restaurant qui est a coté de [La Petite Auberge](LOC)
+      - Est ce qu'il y a des restaurants a coté de [La Petite Auberge](LOC)
 
   - intent: rechercher_hotel
     examples: |
@@ -97,6 +99,7 @@ nlu:
       - Montres-moi des hotels
       - Ou est ce que je peux trouver un hotel avec du [wifi](wifi)
       - J'ai envie d'un hotel avec une [piscine](piscine)
+      - Bien merci. J'aimerai voir les hotels
 
   - intent: rechercher_hotel_proche_restaurant
     examples: |
@@ -112,6 +115,8 @@ nlu:
       - Quel est le [prix](prix) moyens du restaurant [Le Petit Bistro](LOC)
       - Combien [coute](prix) [Le Petit Bistro](LOC)
       - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](LOC) ?
+      - C'est quoi comme [type de cuisine](cuisine) qu'il y a à [La Trattoria](LOC)
+      - C'est quoi le prix moyens du restaurant [La Trattoria](LOC)
 
   - intent: details_complet_restaurant
     examples: |
@@ -132,3 +137,4 @@ nlu:
       - Je veux voir les details d'un hotel
       - Je veux connaitre les informations d'un hotel
       - Je veux la liste des services que propose un hotel
+      - Tu peux me donner des informations sur l'hotel [La Petite Auberge](LOC)
