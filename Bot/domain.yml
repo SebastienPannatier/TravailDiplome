@@ -118,9 +118,9 @@ responses:
     - text: "Bonjour, je vous souhaite la bienvenue"
     - text: "Bonjour, comment allez vous?"
 
-  utter_cheer_up:
-    - text: "Oh je suis désolé de l'entendre, j'espere que ca ira rapidement mieux"
-    - text: "Cela m'attriste, je vous souhaite le meilleur"
+  utter_sorry:
+    - text: "Je suis désolé, j'espère faire mieux la prochaine fois"
+    - text: "Excusez-moi, je suis encore un petit assistant."
 
   utter_did_that_help:
     - text: "Est ce que cela vous a aidé?"
@@ -128,7 +128,7 @@ responses:
 
   utter_happy:
     - text: "Super"
-    - text: "Je suis content pour vous!"
+    - text: "C'est top"
 
   utter_goodbye:
     - text: "Bye"
