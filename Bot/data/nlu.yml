@@ -85,6 +85,18 @@ nlu:
       - Quels restaurants offrent des [tables en extérieur](table_exterieur) ?
       - Je cherche un restaurant
       - Je veux voir des restaurants
+      - Où puis-je trouver un restaurant [italien](cuisine) ?
+      - Montre-moi des restaurants avec des [tables extérieures](table_exterieur).
+      - Je cherche un restaurant avec des [tables en extérieur](table_exterieur).
+      - Connais-tu un restaurant qui propose de la cuisine [italienne](cuisine) ?
+      - Je voudrais manger dans un restaurant [italien](cuisine).
+      - Où manger en [terrasse](table_exterieur) ?
+      - Je veux un restaurant avec des [tables extérieures](table_exterieur).
+      - Est-ce qu'il y a des restaurants [italiens](cuisine) dans le coin ?
+      - Je veux un restaurant avec de la cuisine [italienne](cuisine).
+      - Peux-tu me suggérer un restaurant où manger en [terrasse](table_exterieur) ?
+      - Y a-t-il un restaurant avec des [tables extérieures](table_exterieur) ici ?
+      - Où puis-je trouver un restaurant qui sert de la cuisine [italienne](cuisine) ?
 
   - intent: rechercher_restaurant_proche_hotel
     examples: |
@@ -93,6 +105,21 @@ nlu:
       - Je veux un restaurant a coté de l'hotel [Regal Manor](LOC)
       - Tu peux me donner un restaurant qui est a coté de [La Petite Auberge](LOC)
       - Est ce qu'il y a des restaurants a coté de [La Petite Auberge](LOC)
+      - Où puis-je trouver un restaurant près de l'hôtel [Urban Oasis](LOC) ?
+      - Montre-moi des restaurants à côté de l'hôtel [Coastal Escape](LOC).
+      - Je veux un restaurant proche de l'hôtel [Regal Manor](LOC).
+      - Connais-tu un restaurant à proximité de l'hôtel [La Petite Auberge](LOC) ?
+      - Y a-t-il un bon restaurant près de l'hôtel [Urban Oasis](LOC) ?
+      - Je cherche un endroit pour manger près de l'hôtel [Coastal Escape](LOC).
+      - Montre-moi un restaurant à côté de l'hôtel [Regal Manor](LOC).
+      - Où puis-je dîner près de l'hôtel [La Petite Auberge](LOC) ?
+      - Quels sont les restaurants proches de l'hôtel [Urban Oasis](LOC) ?
+      - Peux-tu me suggérer un restaurant à proximité de l'hôtel [Coastal Escape](LOC) ?
+      - J'aimerais manger près de l'hôtel [Regal Manor](LOC).
+      - Y a-t-il un restaurant proche de l'hôtel [La Petite Auberge](LOC) ?
+      - Trouve-moi un restaurant autour de l'hôtel [Urban Oasis](LOC).
+      - Je veux dîner près de l'hôtel [Coastal Escape](LOC).
+      - Quel restaurant se trouve près de l'hôtel [Regal Manor](LOC) ?
 
   - intent: rechercher_hotel
     examples: |
@@ -104,12 +131,41 @@ nlu:
       - Bien merci. J'aimerai voir les hotels
       - Je cherche un hotel
       - Je veux voir des hotels
+      - Y a-t-il des hotels avec [piscine](piscine) à [Paris](LOC) ?
+      - Trouve-moi un hotel avec du [wifi](wifi).
+      - Peux-tu me recommander un hotel qui offre le [petit dejeuner](petit-dejeuner) ?
+      - Je veux un hotel avec [piscine](piscine).
+      - Où puis-je trouver un hotel à [Paris](LOC) ?
+      - Montre-moi des hotels qui ont le [wifi](wifi).
+      - Je cherche un hotel à [Paris](LOC).
+      - Quels sont les hotels qui proposent le [petit dejeuner](petit-dejeuner) ?
+      - J'aimerais séjourner dans un hotel avec une [piscine](piscine).
+      - Montre-moi des hotels à [Paris](LOC).
+      - Est-ce qu'il y a un hotel avec du [wifi](wifi) ?
+      - Je cherche un hotel avec le [petit dejeuner](petit-dejeuner).
 
   - intent: rechercher_hotel_proche_restaurant
     examples: |
       - Je cherche un hotel proche du restaurant [Sabor Latino](LOC)
       - Je veux dormir a coté du restaurant [The Sushi Bar](LOC)
       - Je veux un hotel a proximité du restaurant [Tandoori Express](LOC)
+      - Y a-t-il un hotel près du restaurant [Sabor Latino](LOC) ?
+      - Trouve-moi un hotel à côté du restaurant [The Sushi Bar](LOC).
+      - Peux-tu me suggérer un hotel près du restaurant [Tandoori Express](LOC) ?
+      - Où puis-je trouver un hotel proche du restaurant [Sabor Latino](LOC) ?
+      - J'ai besoin d'un hotel près du restaurant [The Sushi Bar](LOC).
+      - Y a-t-il un hotel dans les environs du restaurant [Tandoori Express](LOC) ?
+      - Montre-moi des hotels proches du restaurant [Sabor Latino](LOC).
+      - Je cherche un endroit pour dormir à côté du restaurant [The Sushi Bar](LOC).
+      - Je voudrais séjourner dans un hotel près du restaurant [Tandoori Express](LOC).
+      - Est-ce qu'il y a un hotel à proximité du restaurant [Sabor Latino](LOC) ?
+      - Montre-moi un hotel près du restaurant [The Sushi Bar](LOC).
+      - Quels hotels se trouvent autour du restaurant [Tandoori Express](LOC) ?
+      - Peux-tu trouver un hotel à côté du restaurant [Sabor Latino](LOC) ?
+      - Je veux un hotel proche du restaurant [The Sushi Bar](LOC).
+      - Je cherche un hotel à proximité du restaurant [Tandoori Express](LOC).
+      - Où puis-je séjourner près du restaurant [Sabor Latino](LOC) ?
+      - Y a-t-il des hotels autour du restaurant [The Sushi Bar](LOC) ?
 
   - intent: detail_restaurant
     examples: |
@@ -121,12 +177,41 @@ nlu:
       - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](LOC) ?
       - C'est quoi comme [type de cuisine](cuisine) qu'il y a à [La Trattoria](LOC)
       - C'est quoi le prix moyens du restaurant [La Trattoria](LOC)
+      - Est-ce qu'on peut manger en [terrasse](table_exterieur) au [La Belle Epoque](LOC) ?
+      - Quel est le [prix](prix) moyen au [Le Petit Bistro](LOC) ?
+      - Quelle est la [cuisine](cuisine) servie au restaurant [Spice Garden](LOC) ?
+      - Combien coûte un repas au restaurant [La Trattoria](LOC) ?
+      - Quel est le type de [cuisine](cuisine) au [Spice Garden](LOC) ?
+      - Est-il possible de manger en [terrasse](table_exterieur) au [Le Petit Bistro](LOC) ?
+      - Combien est la moyenne des [prix](prix) au restaurant [La Belle Epoque](LOC) ?
+      - Est-ce que [La Trattoria](LOC) propose une [cuisine](cuisine) spécifique ?
+      - Quelle est la gamme de [prix](prix) au [Le Petit Bistro](LOC) ?
+      - Y a-t-il une [terrasse](table_exterieur) au restaurant [La Trattoria](LOC) ?
+      - Quel est le type de [cuisine](cuisine) servi au [Spice Garden](LOC) ?
+      - Peut-on manger à l'extérieur au [La Belle Epoque](LOC) ?
 
   - intent: details_complet_restaurant
     examples: |
       - Je veux voir les details d'un restaurant
       - Je veux connaitre les informations d'un restaurant
       - Je veux la liste des services que propose un restaurant
+      - Peux-tu me donner les détails d'un restaurant ?
+      - J'aimerais avoir plus d'informations sur un restaurant.
+      - Montre-moi les détails complets d'un restaurant.
+      - Je souhaite connaître tous les services d'un restaurant.
+      - Quelles sont les informations disponibles sur un restaurant ?
+      - Quels sont les services proposés par un restaurant ?
+      - Peux-tu me donner toutes les informations sur un restaurant ?
+      - Je veux savoir tout ce qu'un restaurant propose.
+      - J'aimerais voir toutes les informations d'un restaurant.
+      - Je cherche les détails complets d'un restaurant.
+      - Quelles sont les caractéristiques d'un restaurant ?
+      - Je veux en savoir plus sur un restaurant.
+      - Montre-moi les services disponibles dans un restaurant.
+      - Je veux tous les détails sur un restaurant.
+      - Qu'est-ce que tu peux me dire sur un restaurant ?
+      - Je souhaite voir les détails des services d'un restaurant.
+      - Peux-tu me donner la liste complète des services d'un restaurant ?
 
   - intent: detail_hotel
     examples: |
@@ -135,6 +220,21 @@ nlu:
       - Y a-t-il une [piscine](piscine) à l'hotel [Hillside Retreat](LOC) ?
       - Combien [coute](prix) l'hotel [The Renaissance](LOC) ?
       - Est ce qu'il y a du [wifi](wifi) à l'hotel [Harbor View Inn](LOC) ?
+      - Quel est le nombre d'[étoiles](etoiles) de l'hôtel [The Oasis](LOC) ?
+      - Est-ce que l'hôtel [Grand Plaza](LOC) sert le [petit-déjeuner](petit-dejeuner) ?
+      - L'hôtel [Hillside Retreat](LOC) a-t-il une [piscine](piscine) ?
+      - Quel est le [prix](prix) par nuit à l'hôtel [The Renaissance](LOC) ?
+      - Y a-t-il du [wifi](wifi) disponible à l'hôtel [Harbor View Inn](LOC) ?
+      - Combien d'[étoiles](etoiles) a l'hôtel [The Oasis](LOC) ?
+      - Est-ce que l'hôtel [Grand Plaza](LOC) offre le [petit-déjeuner](petit-dejeuner) ?
+      - L'hôtel [Hillside Retreat](LOC) dispose-t-il d'une [piscine](piscine) ?
+      - Quel est le tarif de l'hôtel [The Renaissance](LOC) ?
+      - Est-ce que l'hôtel [Harbor View Inn](LOC) a du [wifi](wifi) ?
+      - Combien y a-t-il d'[étoiles](etoiles) pour l'hôtel [The Oasis](LOC) ?
+      - L'hôtel [Grand Plaza](LOC) propose-t-il le [petit-déjeuner](petit-dejeuner) ?
+      - Y a-t-il une [piscine](piscine) disponible à l'hôtel [Hillside Retreat](LOC) ?
+      - Quel est le coût d'une nuit à l'hôtel [The Renaissance](LOC) ?
+      - Est-ce que l'hôtel [Harbor View Inn](LOC) dispose de [wifi](wifi) ?
 
   - intent: details_complet_hotel
     examples: |
@@ -142,6 +242,22 @@ nlu:
       - Je veux connaitre les informations d'un hotel
       - Je veux la liste des services que propose un hotel
       - Tu peux me donner des informations sur l'hotel [La Petite Auberge](LOC)
+      - Peux-tu me montrer les détails d'un hôtel ?
+      - J'aimerais connaître tous les services d'un hôtel.
+      - Montre-moi les informations complètes d'un hôtel.
+      - Je souhaite voir les détails d'un hôtel.
+      - Peux-tu me donner toutes les informations sur l'hôtel [La Petite Auberge](LOC) ?
+      - Je cherche la liste des services d'un hôtel.
+      - Quelles sont les informations disponibles sur l'hôtel [La Petite Auberge](LOC) ?
+      - Donne-moi les détails des services d'un hôtel.
+      - Quels services propose l'hôtel [La Petite Auberge](LOC) ?
+      - J'aimerais voir les informations d'un hôtel.
+      - Peux-tu me montrer la liste des services d'un hôtel ?
+      - Je souhaite connaître les informations d'un hôtel.
+      - Montre-moi les services disponibles à l'hôtel [La Petite Auberge](LOC).
+      - Quels sont les services offerts par l'hôtel [La Petite Auberge](LOC) ?
+      - J'aimerais avoir un aperçu complet des services d'un hôtel.
+      - Peux-tu me dire tout ce que propose l'hôtel [La Petite Auberge](LOC) ?
 
   - intent: pas_pris_en_charge
     examples: |
