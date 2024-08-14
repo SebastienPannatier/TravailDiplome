@@ -41,9 +41,19 @@ stories:
       - intent: rechercher_restaurant
       - action: action_rechercher_restaurant
 
+  - story: Rechercher un restaurant proche d'un hotel
+    steps:
+      - intent: rechercher_restaurant_proche_hotel
+      - action: action_rechercher_restaurant
+
   - story: Rechercher un hotel à proximité
     steps:
       - intent: rechercher_hotel
+      - action: action_rechercher_hotel
+
+  - story: Rechercher un hotel proche d'un restaurant
+    steps:
+      - intent: rechercher_hotel_proche_restaurant
       - action: action_rechercher_hotel
 
   - story: Rechercher les details d'un restaurant

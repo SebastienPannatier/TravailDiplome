@@ -10,7 +10,9 @@ intents:
   - bot_challenge
   - who_am_i
   - rechercher_restaurant
+  - rechercher_restaurant_proche_hotel
   - rechercher_hotel
+  - rechercher_hotel_proche_restaurant
   - detail_restaurant
   - details_complet_restaurant
   - detail_hotel
@@ -25,9 +27,8 @@ actions:
   - action_detail_complet_hotel
 
 entities:
-  - table_exterieur
+  - table_exterieu
   - cuisine
-  - restaurant
   - petit-dejeuner
   - LOC
   - wifi
@@ -55,14 +56,17 @@ slots:
       - type: from_entity
         entity: LOC
         intent:
-          - rechercher_restaurant
+          - rechercher_restaurant_proche_hotel
           - detail_hotel
   restaurant:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: restaurant
+        entity: LOC
+        intent:
+          - detail_restaurant
+          - rechercher_hotel_proche_restaurant
   petit-dejeuner:
     type: text
     influence_conversation: true

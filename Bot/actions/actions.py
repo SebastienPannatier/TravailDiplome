@@ -72,6 +72,8 @@ class ActionRechercherHotel(Action):
         print(ville)
         print(wifi)
         print(piscine)
+        for i in tracker.latest_message["entities"]:
+            print(i)
 
         # Création de la requête TypeDB
         query = self.build_query(restaurant, petit_dejeuner, ville, wifi, piscine)
@@ -101,6 +103,7 @@ class ActionRechercherHotel(Action):
         if piscine:
             query += f"; $h has piscine true"
         query += "; fetch $h: nom;"
+        print(query)
         return query
 
     def query_typedb(self, query):

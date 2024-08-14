@@ -77,7 +77,6 @@ nlu:
   # Bot domain intent
   - intent: rechercher_restaurant
     examples: |
-      - Je cherche un restaurant à proximité de l'hôtel [Urban Oasis](LOC).
       - Quel restaurant a des [tables extérieures](table_exterieur) ?
       - Quels sont les restaurants qui servent de la cuisine [italienne](cuisine) ?
       - Montre-moi des restaurants.
@@ -85,23 +84,34 @@ nlu:
       - J'ai envie de manger [italien](cuisine), où puis-je aller ?
       - Quels restaurants offrent des [tables en extérieur](table_exterieur) ?
 
+  - intent: rechercher_restaurant_proche_hotel
+    examples: |
+      - Je cherche un restaurant à proximité de l'hôtel [Urban Oasis](LOC).
+      - Je veux manger proche de l'hotel [Coastal Escape](LOC)
+      - Je veux un restaurant a coté de l'hotel [Regal Manor](LOC)
+
   - intent: rechercher_hotel
     examples: |
-      - Je cherche un hotel proche du restaurant [Sabor Latino](restaurant)
       - Quel hotel propose le [petit dejeuner](petit-dejeuner)
       - quels hotels se trouvent à [Paris](LOC)
       - Montres-moi des hotels
       - Ou est ce que je peux trouver un hotel avec du [wifi](wifi)
       - J'ai envie d'un hotel avec une [piscine](piscine)
 
+  - intent: rechercher_hotel_proche_restaurant
+    examples: |
+      - Je cherche un hotel proche du restaurant [Sabor Latino](LOC)
+      - Je veux dormir a coté du restaurant [The Sushi Bar](LOC)
+      - Je veux un hotel a proximité du restaurant [Tandoori Express](LOC)
+
   - intent: detail_restaurant
     examples: |
-      - Est ce que nous pouvons manger en [terasse](table_exterieur) au [La Belle Epoque](restaurant) ?
-      - Est il possible de manger [dehor](table_exterieur) à [La Belle Epoque](restaurant)
-      - Est ce que le restaurant [Le Petit Bistro](restaurant) côute [cher](prix) ?
-      - Quel est le [prix](prix) moyens du restaurant [Le Petit Bistro](restaurant)
-      - Combien [coute](prix) [Le Petit Bistro](restaurant)
-      - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](restaurant) ?
+      - Est ce que nous pouvons manger en [terasse](table_exterieur) au [La Belle Epoque](LOC) ?
+      - Est il possible de manger [dehor](table_exterieur) à [La Belle Epoque](LOC)
+      - Est ce que le restaurant [Le Petit Bistro](LOC) côute [cher](prix) ?
+      - Quel est le [prix](prix) moyens du restaurant [Le Petit Bistro](LOC)
+      - Combien [coute](prix) [Le Petit Bistro](LOC)
+      - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](LOC) ?
 
   - intent: details_complet_restaurant
     examples: |
