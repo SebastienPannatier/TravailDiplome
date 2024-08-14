@@ -25,6 +25,8 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
   - name: SpacyEntityExtractor
+  - name: FallbackClassifier
+    threshold: 0.4
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
