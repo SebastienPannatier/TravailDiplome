@@ -29,6 +29,16 @@ nlu:
       - dacc
       - exactement
 
+  - intent: thank_you
+    examples: |
+      - Merci
+      - Merci beaucoup
+      - Je te remercie
+      - Parfait merci
+      - Merci pour tout
+      - Un grand merci
+      - Mille merci
+
   - intent: deny
     examples: |
       - no

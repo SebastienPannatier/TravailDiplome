@@ -4,6 +4,7 @@ intents:
   - greet
   - goodbye
   - affirm
+  - thank_you
   - deny
   - mood_great
   - mood_unhappy
@@ -162,6 +163,12 @@ responses:
     - text: "Je suis désolé, je n'ai pas compris. Pouvez-vous reformuler votre demande ?"
     - text: "Excusez-moi, je n'ai pas compris votre demande. Pouvez vous réassayer?"
     - text: "Je suis désolé mais je n'ai pas compris."
+
+  utter_de_rien:
+    - text: "Je vous en pris."
+    - text: "Je ne fais que vous aider."
+    - text: "Pas de quoi."
+    - text: "Le plaisir est pour moi."
 
 session_config:
   session_expiration_time: 60

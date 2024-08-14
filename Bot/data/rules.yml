@@ -50,3 +50,8 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: utter_pas_compris
+
+  - rule: Remercier
+    steps:
+      - intent: thank_you
+      - action: utter_de_rien
