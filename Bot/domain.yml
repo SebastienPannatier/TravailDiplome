@@ -29,7 +29,7 @@ actions:
   - action_detail_complet_hotel
 
 entities:
-  - table_exterieu
+  - table_exterieur
   - cuisine
   - petit-dejeuner
   - LOC
