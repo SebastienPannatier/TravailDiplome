@@ -10,7 +10,6 @@ class ActionRechercherRestaurant(Action):
         return "action_rechercher_restaurant"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict):
-        # Reinitialisation des slots
         # Extraction des slots pertinents
         cuisine = tracker.get_slot('cuisine')
         table_exterieur = tracker.get_slot('table_exterieur')
@@ -59,21 +58,12 @@ class ActionRechercherHotel(Action):
         return "action_rechercher_hotel"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict):
-        # Reinitialisation des slots
         # Extraction des slots pertinents
         restaurant = tracker.get_slot('restaurant')
         petit_dejeuner = tracker.get_slot('petit-dejeuner')
         ville = tracker.get_slot('ville')
         wifi = tracker.get_slot('wifi')
         piscine = tracker.get_slot('piscine')
-
-        print(restaurant)
-        print(petit_dejeuner)
-        print(ville)
-        print(wifi)
-        print(piscine)
-        for i in tracker.latest_message["entities"]:
-            print(i)
 
         # Création de la requête TypeDB
         query = self.build_query(restaurant, petit_dejeuner, ville, wifi, piscine)
