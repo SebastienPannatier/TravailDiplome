@@ -76,8 +76,8 @@ Le projet est organisé en trois répertoires principaux :
 8. Lancez le serveur HTTP avec nxp :
    ```bash
    nxp http-server
-   Une fois tous les serveurs lancés, vous pouvez interagir avec le chatbot via l’interface web. Le chatbot est capable de répondre à des requêtes concernant les restaurants et les hôtels, en fournissant des informations détaillées issues du graphe de connaissances.
    ```
+   Une fois tous les serveurs lancés, vous pouvez interagir avec le chatbot via l’interface web. Le chatbot est capable de répondre à des requêtes concernant les restaurants et les hôtels, en fournissant des informations détaillées issues du graphe de connaissances.
 
 ## Contributions
 
