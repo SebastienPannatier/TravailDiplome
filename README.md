@@ -53,27 +53,28 @@ Le projet est organisé en trois répertoires principaux :
    ```bash
    cd Sources
    ```
-3. Executez le script python d'insertion de données
+3. Ajoutez à votre serveur TypeDB le **schema.tql**
+4. Executez le script python d'insertion de données
    ```bash
    py migrate.py
    ```
-4. Rendez-vous dans le dossier /Bot
+5. Rendez-vous dans le dossier /Bot
    ```bash
    cd Bot
    ```
-5. Démarrez le serveur d'actions
+6. Démarrez le serveur d'actions
    ```bash
    rasa run actions
    ```
-6. Démarrez le serveur Rasa
+7. Démarrez le serveur Rasa
    ```bash
    rasa run --debug --enable-api --cors "*"
    ```
-7. Rendez-vous dans le dossier /Web :
+8. Rendez-vous dans le dossier /Web :
    ```bash
    cd Web
    ```
-8. Lancez le serveur HTTP avec nxp :
+9. Lancez le serveur HTTP avec nxp :
    ```bash
    nxp http-server
    ```
