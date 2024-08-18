@@ -53,7 +53,19 @@ Le projet est organisé en trois répertoires principaux :
    ```bash
    cd Sources
    ```
-3. Ajoutez à votre serveur TypeDB le **schema.tql**
+3. Ajoutez à votre base TypeDB le **schema-agence-voyage.tql**
+   ```bash
+   typedb console
+   ```
+   ```bash
+   transaction nom_de_votre_base schema write
+   ```
+   ```bash
+   source schema-agence-voyage.tql
+   ```
+   ```bash
+   commit
+   ```
 4. Executez le script python d'insertion de données
    ```bash
    py migrate.py
