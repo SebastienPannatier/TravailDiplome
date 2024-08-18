@@ -210,14 +210,14 @@ class ActionDetailCompletRestaurant(Action):
                     answer_iterator = transaction.query.fetch(query)
                     for i, JSON in enumerate(answer_iterator, start=1):
                         cuisine_value = JSON.get('r', {}).get('cuisine', [{}])[0].get('value', 'N/A')
-                        table_ext_value = JSON.get('r', {}).get('cuisine', [{}])[0].get('value', 'N/A')
+                        table_ext_value = JSON.get('r', {}).get('table-exterieur', [{}])[0].get('value', 'N/A')
                         if table_ext_value == True:
                             table_ext_value = "Oui"
                         else:
                             table_ext_value = "Non"
-                        prix_value = JSON.get('r', {}).get('cuisine', [{}])[0].get('value', 'N/A')
+                        prix_value = JSON.get('r', {}).get('prix', [{}])[0].get('value', 'N/A')
                         list_detail += f" Type de cuisine: {cuisine_value}\n"
-                        list_detail += f" Terrace: {cuisine_value}\n"
+                        list_detail += f" Terrace: {table_ext_value}\n"
                         list_detail += f" Catégorie de prix: {prix_value}\n"
                     print("Requete envoyé")
         return list_detail
