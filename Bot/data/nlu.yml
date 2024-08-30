@@ -100,11 +100,11 @@ nlu:
       - Je cherche un restaurant avec des [tables en extérieur](table_exterieur).
       - Connais-tu un restaurant qui propose de la cuisine [italienne](cuisine) ?
       - Je voudrais manger dans un restaurant [italien](cuisine).
-      - Où manger en [terrasse](table_exterieur) ?
+      - Où manger en [terrace](table_exterieur) ?
       - Je veux un restaurant avec des [tables extérieures](table_exterieur).
       - Est-ce qu'il y a des restaurants [italiens](cuisine) dans le coin ?
       - Je veux un restaurant avec de la cuisine [italienne](cuisine).
-      - Peux-tu me suggérer un restaurant où manger en [terrasse](table_exterieur) ?
+      - Peux-tu me suggérer un restaurant où manger en [terrace](table_exterieur) ?
       - Y a-t-il un restaurant avec des [tables extérieures](table_exterieur) ici ?
       - Où puis-je trouver un restaurant qui sert de la cuisine [italienne](cuisine) ?
 
@@ -187,16 +187,16 @@ nlu:
       - Quel [cuisine](cuisine) propose le restaurant [Spice Garden](LOC) ?
       - C'est quoi comme [type de cuisine](cuisine) qu'il y a à [La Trattoria](LOC)
       - C'est quoi le prix moyens du restaurant [La Trattoria](LOC)
-      - Est-ce qu'on peut manger en [terrasse](table_exterieur) au [La Belle Epoque](LOC) ?
+      - Est-ce qu'on peut manger en [terrace](table_exterieur) au [La Belle Epoque](LOC) ?
       - Quel est le [prix](prix) moyen au [Le Petit Bistro](LOC) ?
       - Quelle est la [cuisine](cuisine) servie au restaurant [Spice Garden](LOC) ?
       - Combien coûte un repas au restaurant [La Trattoria](LOC) ?
       - Quel est le type de [cuisine](cuisine) au [Spice Garden](LOC) ?
-      - Est-il possible de manger en [terrasse](table_exterieur) au [Le Petit Bistro](LOC) ?
+      - Est-il possible de manger en [terrace](table_exterieur) au [Le Petit Bistro](LOC) ?
       - Combien est la moyenne des [prix](prix) au restaurant [La Belle Epoque](LOC) ?
       - Est-ce que [La Trattoria](LOC) propose une [cuisine](cuisine) spécifique ?
       - Quelle est la gamme de [prix](prix) au [Le Petit Bistro](LOC) ?
-      - Y a-t-il une [terrasse](table_exterieur) au restaurant [La Trattoria](LOC) ?
+      - Y a-t-il une [terrace](table_exterieur) au restaurant [La Trattoria](LOC) ?
       - Quel est le type de [cuisine](cuisine) servi au [Spice Garden](LOC) ?
       - Peut-on manger à l'extérieur au [La Belle Epoque](LOC) ?
 
